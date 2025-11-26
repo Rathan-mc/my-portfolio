@@ -18,6 +18,13 @@ export function Certifications() {
       <div className="certs-layout">
         <div>
           <ul className="cert-list">
+
+            {/* 🔥 New Certificate Added at the top */}
+            <CertItem
+              title="Oracle Cloud Infrastructure 2025 Certified DevOps Professional"
+              issuer="Oracle"
+            />
+
             <CertItem
               title="NVIDIA GSI Technology Curriculum"
               issuer="NVIDIA"
@@ -40,17 +47,17 @@ export function Certifications() {
         <aside className="certs-gallery">
           <div className="certs-gallery__item">
             <img
-              src="/cert1-placeholder.txt"
-              alt="Certification 1 placeholder"
+              src="/oracle.png"
+              alt="Oracle Cloud Infrastructure 2025 Certified DevOps Professional"
             />
-            <span>Upload certificate image 1</span>
+            <span>Oracle DevOps Professional</span>
           </div>
           <div className="certs-gallery__item">
             <img
-              src="/cert2-placeholder.txt"
-              alt="Certification 2 placeholder"
+              src="/NVIDIA.png"
+              alt="NVIDIA GSI Technology Curriculum"
             />
-            <span>Upload certificate image 2</span>
+            <span>NVIDIA GSI Technology</span>
           </div>
         </aside>
       </div>

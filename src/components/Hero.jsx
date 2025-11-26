@@ -21,11 +21,11 @@ export function Hero() {
           </div>
           <div>
             <h3>Location</h3>
-            <p>India · Open to remote roles</p>
+            <p>Mysore</p>
           </div>
           <div>
             <h3>Experience</h3>
-            <p>Full‑stack &amp; DevOps since 2023</p>
+            <p>Full‑stack &amp; DevOps since 2024</p>
           </div>
         </div>
 
@@ -46,8 +46,8 @@ export function Hero() {
       <aside className="hero__sidebar">
         <div className="hero__photo-wrapper">
           <img
-            src="/profile-placeholder.txt"
-            alt="Your profile"
+            src="/profile.jpg"
+            alt="Rathan M C - Full Stack Developer"
             className="hero__photo"
           />
         </div>
