@@ -2,11 +2,19 @@
   command = "npm run build"
   publish = "dist"
 
-[dev]
-  command = "npm run dev"
-  port = 5173
-  publish = "dist"
+# allow sitemap.xml
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap.xml"
+  status = 200
 
+# allow robots.txt
+[[redirects]]
+  from = "/robots.txt"
+  to = "/robots.txt"
+  status = 200
+
+# react/vite fallback for everything else
 [[redirects]]
   from = "/*"
   to = "/index.html"

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rathan-mc.netlify.app/sitemap.xml
