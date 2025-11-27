@@ -69,3 +69,57 @@ export const revealOnScroll = () => {
     observer.observe(reveal);
   });
 };
+
+// Cursor trail effect
+export const cursorTrail = () => {
+  let mouseX = 0;
+  let mouseY = 0;
+  
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    
+    const trail = document.createElement('div');
+    trail.className = 'cursor-trail';
+    trail.style.left = mouseX + 'px';
+    trail.style.top = mouseY + 'px';
+    
+    document.body.appendChild(trail);
+    
+    setTimeout(() => {
+      trail.remove();
+    }, 800);
+  });
+};
+
+// Magnetic button effect
+export const magneticButtons = () => {
+  const buttons = document.querySelectorAll('.btn, .card, .skill-badge');
+  
+  buttons.forEach(button => {
+    button.addEventListener('mousemove', (e) => {
+      const rect = button.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      
+      button.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px) scale(1.05)`;
+    });
+    
+    button.addEventListener('mouseleave', () => {
+      button.style.transform = 'translate(0px, 0px) scale(1)';
+    });
+  });
+};
+
+// Parallax scrolling effect
+export const parallaxScroll = () => {
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const parallaxElements = document.querySelectorAll('.hero, .section');
+    
+    parallaxElements.forEach((element, index) => {
+      const speed = (index + 1) * 0.1;
+      element.style.transform = `translateY(${scrolled * speed}px)`;
+    });
+  });
+};
