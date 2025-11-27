@@ -5,9 +5,10 @@ import { Skills } from './components/Skills'
 import { Experience } from './components/Experience'
 import { Projects } from './components/Projects'
 import { Certifications } from './components/Certifications'
-import { DevOpsPipeline } from './components/DevOpsPipeline'
+import { Profile } from './components/Profile'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
+import { observeElements, revealOnScroll, cursorTrail, magneticButtons, parallaxScroll } from './utils/animations'
 
 const sections = [
   { id: 'about', label: 'About' },
@@ -26,6 +27,19 @@ export default function App() {
   useEffect(() => {
     document.body.className = theme
   }, [theme])
+
+  useEffect(() => {
+    // Initialize animations after component mounts
+    const timer = setTimeout(() => {
+      observeElements();
+      revealOnScroll();
+      cursorTrail();
+      magneticButtons();
+      parallaxScroll();
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, [])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -62,14 +76,14 @@ export default function App() {
         <section id="skills" className="section">
           <Skills />
         </section>
+        <section id="devops" className="section">
+          <Profile />
+        </section>
         <section id="experience" className="section">
           <Experience />
         </section>
         <section id="projects" className="section">
           <Projects />
-        </section>
-        <section id="devops" className="section">
-          <DevOpsPipeline />
         </section>
         <section id="certifications" className="section">
           <Certifications />

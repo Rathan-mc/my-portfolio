@@ -1,6 +1,22 @@
 import React from 'react'
 
-const SkillBadge = ({ label }) => <span className="skill-badge">{label}</span>
+const SkillBadge = ({ label }) => {
+  const handleClick = () => {
+    // Add ripple effect
+    const event = new CustomEvent('skillClicked', { detail: label });
+    window.dispatchEvent(event);
+  };
+
+  return (
+    <span 
+      className="skill-badge" 
+      onClick={handleClick}
+      title={`Click to highlight ${label}`}
+    >
+      {label}
+    </span>
+  );
+}
 
 export function Skills() {
   return (

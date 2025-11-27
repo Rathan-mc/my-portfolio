@@ -35,18 +35,18 @@ export function Hero() {
         </div>
 
         <div className="hero__tags">
-          <span>.NET Core</span>
-          <span>React.js</span>
-          <span>Azure DevOps</span>
-          <span>Docker</span>
-          <span>CI/CD</span>
+          <span onClick={() => window.open('https://dotnet.microsoft.com/', '_blank')}>.NET Core</span>
+          <span onClick={() => window.open('https://reactjs.org/', '_blank')}>React.js</span>
+          <span onClick={() => window.open('https://azure.microsoft.com/en-us/services/devops/', '_blank')}>Azure DevOps</span>
+          <span onClick={() => window.open('https://www.docker.com/', '_blank')}>Docker</span>
+          <span onClick={() => window.open('https://en.wikipedia.org/wiki/CI/CD', '_blank')}>CI/CD</span>
         </div>
       </div>
 
       <aside className="hero__sidebar">
         <div className="hero__photo-wrapper">
           <img
-            src="/profile.jpg"
+            src="/profile1.jpg"
             alt="Rathan M C - Full Stack Developer"
             className="hero__photo"
           />

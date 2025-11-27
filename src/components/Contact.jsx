@@ -34,9 +34,10 @@ export function Contact() {
             </li>
           </ul>
           <p className="contact-note">
-            I&apos;m actively interested in full‑stack and DevOps‑focused roles where I can own features
-            end‑to‑end — from API design to deployment automation.
+            I thrive in roles where full-stack engineering meets DevOps — building scalable backends, fast
+            frontends, and automating everything from testing to cloud deployment for a seamless release experience.
           </p>
+
         </div>
 
         <form
